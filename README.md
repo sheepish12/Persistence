@@ -65,4 +65,4 @@ end)
 
 ---
 
-That's all. All values you get from Persistence are deep copied, so if a value is a table and you edit the table from `get`, the actual table won't change. The only way to change values is to set them. To clarify once again: the only function out of these four that yields `Persistence.await`.
+That's all. All values you get from Persistence are deep copied, so if a value is a table and you edit the table from `get`, the actual table won't change. The only way to change values is to set them. To clarify once again: the only function out of these four that yields is `Persistence.await`.
