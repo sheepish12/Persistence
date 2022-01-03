@@ -31,7 +31,7 @@ From there, you can use the module from any server-side code however you like. I
 
 ---
 
-`Persistence.await` gets the value belonging to the field you pass and returns it. If the player's profile hasn't loaded yet, the function yields until it's available.
+`Persistence.await` gets the value belonging to the field you pass and returns it. If the player's profile hasn't loaded yet, **the function yields** until it's available.
 ```lua
 local cash = Persistence.await(player, "cash")
 print(player.Name .. " has " .. tostring(cash) .. " cash!")
@@ -65,4 +65,4 @@ end)
 
 ---
 
-That's all. All values you get from Persistence are deep copied, so if a value is a table and you edit the table from `get`, the actual table won't change. The only way to change values is to set them.
+That's all. All values you get from Persistence are deep copied, so if a value is a table and you edit the table from `get`, the actual table won't change. The only way to change values is to set them. To clarify once again: the only function out of these four that yields `Persistence.await`.
