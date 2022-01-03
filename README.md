@@ -12,9 +12,9 @@ local Persistence = require(ServerStorage.Modules.Persistence)
 
 local STORE_NAME = "player-data-live"
 local TEMPLATE = {
-	["cash"] = 0,
-	["items"] = {},
-	["log-in-times"] = 0,
+  ["cash"] = 0,
+  ["items"] = {},
+  ["log-in-times"] = 0,
 }
 
 Persistence.init(STORE_NAME, TEMPLATE)
@@ -23,7 +23,7 @@ Players.PlayerAdded:Connect(Persistence.register)
 Players.PlayerRemoving:Connect(Persistence.deregister)
 -- We do this so Studio works and to be future-proof.
 for _, player in ipairs(Players:GetPlayers()) do
-	task.spawn(Persistence.register, player)
+  task.spawn(Persistence.register, player)
 end
 ```
 
