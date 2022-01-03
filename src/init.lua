@@ -142,7 +142,6 @@ function Persistence.register(player: Player)
 	end
 
 	profile:AddUserId(player.UserId) -- GDPR compliance
-	-- Fill in missing variables from ProfileTemplate (optional)
 	profile:Reconcile()
 	profile:ListenToRelease(function()
 		releasedSet[player] = true
