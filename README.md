@@ -4,7 +4,7 @@ Persistence is a simple and lightweight wrapper over ProfileService. It supports
 1. Get the latest version of Persistence from the [Releases](https://github.com/BenSBk/Persistence/releases) page.
 2. Add the ProfileService dependency from the Roblox library [asset](https://www.roblox.com/library/5331689994/ProfileService).
 3. Put both inside ServerStorage or similar and change the path to ProfileService inside Persistence.
-4. Add a script inside ServerScriptService that initialises the module and registers players. This script is where you will choose the data template and profile store name:
+4. Add a script inside ServerScriptService that initialises the module and registers and deregisters players. This script is where you will choose the data template and profile store name:
 ```lua
 local ServerStorage = game:GetService("ServerStorage")
 local Players = game:GetService("Players")
