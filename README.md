@@ -41,7 +41,7 @@ print(player.Name .. " has " .. tostring(cash) .. " cash!")
 
 `Persistence.get` attempts to get the value belonging to the field you pass and returns one or two values. If the profile is loaded when the function is called, it returns `true` and the value belonging to the field. If the profile isn't loaded when the function is called, it returns `false`.
 ```lua
-local isLoaded, cash = Persistence.await(player, "cash")
+local isLoaded, cash = Persistence.get(player, "cash")
 if isLoaded then
   print(player.Name .. " has " .. tostring(cash) .. " cash!")
 end
