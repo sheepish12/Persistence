@@ -1,5 +1,5 @@
 --[[
-	Persistence 0.1.0 by BenSBk
+	Persistence 0.2.0 by BenSBk
 	Depends on:
 	- The Roblox API
 	- ProfileService @ 2022-01-03
@@ -168,7 +168,7 @@ function Persistence.deregister(player: Player)
 	end
 end
 
-function Persistence.init(storeName, originalTemplate)
+function Persistence.init(storeName: string, originalTemplate: {[any] = any})
 	assert(isServer, "Persistence can only be used on the server")
 	assert(not profileStore, "Persistence has already been initialised")
 	
