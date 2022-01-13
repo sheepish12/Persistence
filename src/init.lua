@@ -168,7 +168,7 @@ function Persistence.deregister(player: Player)
 	end
 end
 
-function Persistence.init(storeName: string, originalTemplate: {[any] = any})
+function Persistence.init(storeName: string, originalTemplate: {[any]: any})
 	assert(isServer, "Persistence can only be used on the server")
 	assert(not profileStore, "Persistence has already been initialised")
 	
